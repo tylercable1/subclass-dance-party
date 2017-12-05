@@ -20,8 +20,25 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
+
+.blinkyDancer{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+.growingDancer{
+  border:10px solid yellow;
+  border-radius:0px;
+  position:absolute;
+}
+.crappyDancer{
+  content:url(http://s3.amazonaws.com/pix.iemoji.com/sams33/0566.png); 
+  position:absolute;
+}
+
