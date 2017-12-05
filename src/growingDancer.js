@@ -33,12 +33,22 @@ makeGrowingDancer.prototype.step = function(timeBetweenSteps) {
 makeGrowingDancer.prototype.lineUp = function() {
 
   var styleSettings = {
-    top: $("body").height() * 0.6
+    top: $("body").height() * 0.8
   };
   this.$node.css(styleSettings);
 
 };
 
+makeGrowingDancer.prototype.danceOff = function() {
+
+  var styleSettings = {
+    top: $("body").height() * 0.47,
+    left: $("body").width() * 0.5,
+  };
+
+  this.$node.css(styleSettings);
+
+};
 
 // .animate( properties [, duration ] [, easing ] [, complete ] )
 

@@ -46,6 +46,23 @@ $(document).ready(function() {
   });
 
 
+  $('.danceOffButton').on('click', function(event) {
+    var growingDancerDanceOff = false;
+    var blinkyDancerDanceOff = false;
+    
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      if (window.dancers[i] instanceof makeGrowingDancer && !growingDancerDanceOff) {
+        window.dancers[i].danceOff();
+        growingDancerDanceOff = true;
+      }
+      if (window.dancers[i] instanceof makeBlinkyDancer && !blinkyDancerDanceOff) {
+        window.dancers[i].danceOff();
+        blinkyDancerDanceOff = true;
+      }
+    }
+
+  });
 
 });
 

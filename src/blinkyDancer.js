@@ -28,6 +28,15 @@ makeBlinkyDancer.prototype.lineUp = function() {
 
 };
 
+makeBlinkyDancer.prototype.danceOff = function() {
+
+  var styleSettings = {
+    top: $("body").height() * 0.52,
+    left: $("body").width() * 0.5,
+  };
+  this.$node.css(styleSettings);
+
+};
 
 
 
