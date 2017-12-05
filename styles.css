@@ -28,7 +28,7 @@ body, a:link, a:visited, a:active{
 }
 
 .blinkyDancer{
-  border:10px solid red;
+  content: url(http://s3.amazonaws.com/pix.iemoji.com/lg33/0462.png);
   border-radius:10px;
   position:absolute;
 }
