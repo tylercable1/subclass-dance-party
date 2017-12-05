@@ -12,17 +12,35 @@ var makeGrowingDancer = function(top, left, timeBetweenSteps) {
 makeGrowingDancer.prototype = Object.create(makeDancer.prototype);
 makeGrowingDancer.prototype.constructor = makeGrowingDancer;
 
+makeGrowingDancer.prototype.grow = function() {
+  this.$node.animate({height: 15, width: 15 },300);
+};
+
+makeGrowingDancer.prototype.shrink = function() {
+  this.$node.animate({height: 3, width: 3 },300);
+};
+
 
 
 makeGrowingDancer.prototype.step = function(timeBetweenSteps) {
   
   this.oldStep(timeBetweenSteps);
+  this.grow();
+  this.shrink();
 
-  this.$node.toggle();
+};
+
+makeGrowingDancer.prototype.lineUp = function() {
+
+  var styleSettings = {
+    top: $("body").height() * 0.6
+  };
+  this.$node.css(styleSettings);
 
 };
 
 
-makeGrowingDancer.prototype.grow = function() {
+// .animate( properties [, duration ] [, easing ] [, complete ] )
 
-};
+
+// func.call(this, args...)

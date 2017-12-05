@@ -28,6 +28,24 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    
+    window.dancers.push(dancer);
+
+    
   });
+
+  
+
+  $('.lineUpButton').on('click', function(event) {
+    // iterate over dancers array
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+      // window.dancers[i].lineUp(this.css.top, this.css.left);
+      //call lineUp method on each dancer
+    }
+  });
+
+
+
 });
 

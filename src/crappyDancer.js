@@ -5,7 +5,12 @@ var makeCrappyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="crappyDancer"></span>');
   this.setPosition(top, left);
-
+  // $('.crappyDancer').on('mouseover', function(event) {
+  //   // var allCrappyDancers = window.dancers.getElementByClass("crappyDancer");
+  //   // for (var i = 0; i < allCrappyDancers.length; i++){
+  //   event.target
+  //   }
+  // });
 
 };
 
@@ -28,3 +33,18 @@ makeCrappyDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeCrappyDancer.prototype.lineUp = function(currentTop, currentLeft) {
+  // var styleSettings = {
+  //   top: currentTop / 2,
+  //   left: currentLeft / 2,
+  // };
+  // this.$node.css(styleSettings);
+
+};
+
+
+// makeCrappyDancer.prototype.moveAway = function() {
+  
+//   this.$node.animate({top: +15, left: -15 },300);
+// };
