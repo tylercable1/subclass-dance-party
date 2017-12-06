@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.isPlaying = false;
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -62,6 +63,22 @@ $(document).ready(function() {
       }
     }
 
+  });
+
+
+
+  $('body').on('keypress', function(event) {
+
+    if (event.keyCode === 32 && window.isPlaying) {
+      document.getElementById('music').pause();
+      console.log('silence!');
+    }       
+    if (event.keyCode === 32 && !window.isPlaying) {
+      document.getElementById('music').play();
+      console.log('music!');
+    }
+    
+    window.isPlaying = !window.isPlaying;   
   });
 
 });

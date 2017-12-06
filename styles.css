@@ -21,6 +21,12 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 
+.musicButton{
+background-color: #5BFF33;
+font-size: 29px;
+
+}
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
