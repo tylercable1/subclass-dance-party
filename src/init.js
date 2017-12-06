@@ -38,11 +38,10 @@ $(document).ready(function() {
   
 
   $('.lineUpButton').on('click', function(event) {
-    // iterate over dancers array
+
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
-      // window.dancers[i].lineUp(this.css.top, this.css.left);
-      //call lineUp method on each dancer
+
     }
   });
 
@@ -71,11 +70,9 @@ $(document).ready(function() {
 
     if (event.keyCode === 32 && window.isPlaying) {
       document.getElementById('music').pause();
-      console.log('silence!');
     }       
     if (event.keyCode === 32 && !window.isPlaying) {
       document.getElementById('music').play();
-      console.log('music!');
     }
     
     window.isPlaying = !window.isPlaying;   

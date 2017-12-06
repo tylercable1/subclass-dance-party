@@ -50,7 +50,3 @@ makeGrowingDancer.prototype.danceOff = function() {
 
 };
 
-// .animate( properties [, duration ] [, easing ] [, complete ] )
-
-
-// func.call(this, args...)
